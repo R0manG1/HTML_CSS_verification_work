@@ -9,6 +9,7 @@ header{
     box-shadow: 4px 6px 13px 0 rgba(215, 215, 215, 0.25);
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 .header__w-1250{
@@ -27,13 +28,13 @@ header{
     margin-top: 26px;
 }
 
-.header__w-1250 .logotype h2{
+.left_block .logotype h2, .header__w-1250 .logotype h2{
     color: #001858;
     font-size: 36px;
     font-weight: 600;
 }
 
-.header__w-1250 .logotype p{
+.left_block .logotype p, .header__w-1250 .logotype p{
     width: 48px;
     height: 27px;
     color: #6246EA;
@@ -85,13 +86,15 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .search_wrapper img{
+    margin-top: 2px;
     width: 17px;
     height: 17px;
 }
+
 /* ------------------ HERO SECTION ------------------ */
 
 .hero{
@@ -144,19 +147,26 @@ header{
     font-weight: 400;
 }
 
-.subscribe_form button{
+.submit_button{
     display: flex;
     height: 67px;
-    padding: 20px 23px 19px 23px;
+    padding: 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     border-radius: 8px;
+    border: 3px solid transparent;
     background: #6246EA;
     color: #FFFFFE;
     font-size: 20px;
     font-weight: 700;
     text-transform: capitalize;
+}
+
+.submit_button:hover{
+    background: #FFFFFE;
+    color: #6246EA;
+    border-color: #6246EA;
 }
 
 .img_wrapper{
@@ -261,6 +271,10 @@ header{
 
 .categories .cards .card:hover{
     background: #6246EA;
+}
+
+.categories .cards .card:hover p{
+    color: #FFFFFE;
 }
 
 /*------------------ ARTICLES SECTION -----------------*/
@@ -370,17 +384,6 @@ header{
 .articles__w-1252 button{
     width: 165px;
     height: 64px;
-    display: flex;
-    padding: 20px 23px 19px 23px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 8px;
-    background: #6246EA;
-    color: #FFFFFE;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: capitalize;
 }
 
 /*--------------------- SUBSCRIBE SECTION -----------------*/
@@ -393,6 +396,7 @@ header{
     justify-content: center;
     align-items: center;
 }
+
 .subscribe__w-696{
     width: 696px;
     height: 337px;
@@ -402,20 +406,26 @@ header{
     align-items: center;
     gap: 30px;
 }
+
 .img_ellipse{
     width: 130px;
     height: 130px;
     background: #FFFFFE;
     border-radius: 50%;
+    overflow: hidden;
     position: relative;
 }
+
 .img_ellipse img{
     width: 80px;
     height: 107px;
+    object-fit: cover;
     position: absolute;
+    left: 50%;
     bottom: 0;
-    left: 25px;
+    transform: translateX(-50%);
 }
+
 .subscribe__w-696 h2{
     color: #2B2C34;
     font-size: 36px;
@@ -423,6 +433,7 @@ header{
     text-transform: capitalize;
     margin-bottom: 10px;
 }
+
 .subscribe__w-696 p{
     color: #C0C0C0;
     text-align: center;
@@ -430,3 +441,103 @@ header{
     font-weight: 400;
 }
 
+footer{
+    width: 100%;
+    height: 435px;
+    background: #E4E5E9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 70px;
+}
+
+.footer__w-1249{
+    width: 1249px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer_content{
+    width: 100%;
+    height: 245px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left_block{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.left_block .logotype{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.left_block p{
+    color: #2B2C34;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.left_block .social_media{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.right_block{
+    width: 805px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.right_block ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.right_block ul li h3{
+    color: #2B2C34;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.right_block ul li a{
+    color: #2B2C34;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+footer hr{
+    width: 1250px;
+    height: 1px;
+    background: #C0C0C0;
+    margin: 50px auto 26px auto;
+    border: none;
+}
+
+footer > p{
+    color: #2B2C34;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 95px;
+}
