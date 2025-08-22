@@ -120,12 +120,24 @@ header{
     text-transform: capitalize;
 }
 
-.hero__content p{
+.line_text_wrapper{
+    width: 664px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 30px 0;
+}
+.line_text_wrapper .line{
+    width: 3px;
+    height: 56px;
+    background: #2B2C34;
+}
+
+.line_text_wrapper p{
     width: 652px;
     color: #9A9494;
     font-size: 20px;
     font-weight: 400;
-    margin: 30px 0 30px 0;
 }
 
 .subscribe_form{
@@ -142,9 +154,12 @@ header{
     gap: 10px;
     border-radius: 8px;
     background: #FFFFFE;
-    color: #C0C0C0;
+    color: #646464;
     font-size: 20px;
     font-weight: 400;
+}
+.subscribe_form input::placeholder{
+    color: #C0C0C0;
 }
 
 .submit_button{
@@ -318,7 +333,7 @@ header{
     height: 425px;
     padding: 20px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 12px;
     background: #FFFFFE;
@@ -337,6 +352,7 @@ header{
     font-size: 20px;
     font-weight: 700;
     text-transform: capitalize;
+    margin-top: 25px;
 }
 
 .article_card .author{
@@ -346,6 +362,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: 15px;
+    margin-top: auto;
 }
 
 .article_card .author img{
